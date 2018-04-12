@@ -13,4 +13,8 @@ describe('Record', function() {
     assert.equal(record1.artist, 'Queens of the stone age');
   });
 
+  it('should have an title', function() {
+    assert.equal(record1.title, 'Songs for the deaf');
+  });
+
 });
