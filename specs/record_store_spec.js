@@ -49,4 +49,11 @@ describe('Record Store tests', function() {
     assert.equal(1, recordStore.inventory.length);
   });
 
+  it("Record store's balance should increase when selling record", function() {
+    recordStore.addRecord(record1);
+    recordStore.addRecord(record2);
+    recordStore.sellRecord(record2);
+    assert.equal(9.99, recordStore.balance);
+  });
+
 });
