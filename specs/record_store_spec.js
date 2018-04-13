@@ -30,4 +30,10 @@ describe('Record Store tests', function() {
     assert.equal(0, recordStore.balance);
   });
 
+  it('should be able to add records', function() {
+    recordStore.addRecord(record1);
+    recordStore.addRecord(record2);
+    assert.equal(2, recordStore.inventory.length);
+  });
+
 });
