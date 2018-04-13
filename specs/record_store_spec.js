@@ -18,4 +18,8 @@ describe('Record Store tests', function() {
     assert.equal(recordStore.name, 'Deaf Factory');
   });
 
+  it('should have a city', function() {
+    assert.equal(recordStore.city, 'Edinburgh');
+  });
+
 });
