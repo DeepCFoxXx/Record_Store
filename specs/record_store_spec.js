@@ -56,4 +56,10 @@ describe('Record Store tests', function() {
     assert.equal(9.99, recordStore.balance);
   });
 
+  it("Record store can report on finances", function() {
+    recordStore.addRecord(record1);
+    recordStore.addRecord(record2);
+    assert.equal("Current Balance: 0 Current Stock Value: 19.98", recordStore.financeReport());
+  });
+
 });

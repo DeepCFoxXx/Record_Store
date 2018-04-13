@@ -23,4 +23,18 @@ RecordStore.prototype.sellRecord = function(recordToSell) {
   this.balance += recordToSell.price
 }
 
+RecordStore.prototype.calculateStockValue = function() {
+  var stockValue = null;
+  this.inventory.forEach(function(record) {
+    stockValue += record.price;
+  });
+  return stockValue.toFixed(2);
+}
+
+RecordStore.prototype.financeReport = function() {
+  var stockValue = this.calculateStockValue();
+  return "Current Balance: " + this.balance + " Current Stock Value: " + stockValue
+
+}
+
 module.exports = RecordStore;
