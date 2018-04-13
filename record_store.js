@@ -9,4 +9,11 @@ RecordStore.prototype.addRecord = function(record) {
   this.inventory.push(record);
 }
 
+RecordStore.prototype.listInventory = function() {
+  var inventoryList = this.inventory.map(function(record) {
+    return record.prettyPrint()
+  })
+  return inventoryList
+}
+
 module.exports = RecordStore;
