@@ -12,4 +12,11 @@ RecordCollector.prototype.buyRecord = function (record) {
   this.collection.push(record);
 }
 
+RecordCollector.prototype.sellRecord = function (record) {
+  var recordIndex = this.collection.indexOf(record);
+  this.collection.splice(recordIndex, 1);
+
+  this.cash += record.price;
+}
+
 module.exports = RecordCollector;

@@ -41,4 +41,10 @@ describe('Record Collector Tests', function() {
     assert.equal(0, recordCollector.collection.length);
   });
 
+  it("Record Collector can sell record", function() {
+    recordCollector.buyRecord(record2);
+    recordCollector.sellRecord(record2);
+    assert.equal(0, recordCollector.collection.length);
+  });
+
 });
