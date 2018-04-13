@@ -47,4 +47,10 @@ describe('Record Collector Tests', function() {
     assert.equal(0, recordCollector.collection.length);
   });
 
+  it("Record Collectors cash increases when selling", function() {
+    recordCollector.buyRecord(record2);
+    recordCollector.sellRecord(record2);
+    assert.equal(100.00, recordCollector.cash);
+  });
+
 });
