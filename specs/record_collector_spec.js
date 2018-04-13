@@ -21,4 +21,13 @@ describe('Record Collector Tests', function() {
     assert.equal(recordCollector.name, 'Kara');
   });
 
+  it('should have cash', function() {
+    assert.equal(10, recordCollector.cash);
+  });
+
+  it('should buy a record', function() {
+    recordCollector.buyRecord(record1);
+    assert.equal(1, recordCollector.collection.length);
+  });
+
 });
