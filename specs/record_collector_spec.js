@@ -14,7 +14,7 @@ describe('Record Collector Tests', function() {
     recordStore = new RecordStore('Deaf Factory', 'Edinburgh');
     record1 = new Record('Queens of the stone age', 'Songs for the deaf', 9.99);
     record2 = new Record('Marina and the diamonds', 'Family jewels', 9.99);
-    recordCollector = new RecordCollector('Kara', 10.00);
+    recordCollector = new RecordCollector('Kara', 100.00);
   });
 
   it('should have a name', function() {
@@ -22,12 +22,17 @@ describe('Record Collector Tests', function() {
   });
 
   it('should have cash', function() {
-    assert.equal(10, recordCollector.cash);
+    assert.equal(100, recordCollector.cash);
   });
 
   it('should buy a record', function() {
     recordCollector.buyRecord(record1);
     assert.equal(1, recordCollector.collection.length);
+  });
+
+  it("Record collector's cash goes down when buying record", function() {
+    recordCollector.buyRecord(record1);
+    assert.equal(90.01, recordCollector.cash);
   });
 
 });
