@@ -17,4 +17,8 @@ describe('Record Collector Tests', function() {
     recordCollector = new RecordCollector('Kara', 10.00);
   });
 
+  it('should have a name', function() {
+    assert.equal(recordCollector.name, 'Kara');
+  });
+
 });
