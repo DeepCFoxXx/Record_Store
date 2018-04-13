@@ -26,4 +26,8 @@ describe('Record Store tests', function() {
     assert.equal(0, recordStore.inventory.length);
   });
 
+  it('should have zero balance', function() {
+    assert.equal(0, recordStore.balance);
+  });
+
 });
