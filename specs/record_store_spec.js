@@ -42,4 +42,11 @@ describe('Record Store tests', function() {
     assert.equal('Artist: Queens of the stone age, Title: Songs for the deaf, Price: 9.99', recordStore.listInventory()[0]);
   });
 
+  it('should be able to sell records', function() {
+    recordStore.addRecord(record1);
+    recordStore.addRecord(record2);
+    recordStore.sellRecord(record2);
+    assert.equal(1, recordStore.inventory.length);
+  });
+
 });
