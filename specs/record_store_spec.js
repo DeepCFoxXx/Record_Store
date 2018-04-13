@@ -22,4 +22,8 @@ describe('Record Store tests', function() {
     assert.equal(recordStore.city, 'Edinburgh');
   });
 
+  it('should start empty', function() {
+    assert.equal(0, recordStore.inventory.length);
+  });
+
 });
